@@ -1,1 +1,22 @@
-<p>home works!</p>
+<h1 class="title-page">Menú Home- Listado Alumnos</h1>
+<mat-divider></mat-divider>
+<mat-list class="container">
+    @for (student of students; track student.ID_Alumno; let idx = $index) {
+        <mat-list-item>
+            <img matListItemAvatar src="https://i.pravatar.cc/{{ idx }}" alt="..." loading="lazy">
+            <h3 matListItemTitle>{{student.Apellidos}}, {{student.Nombre}}</h3>
+            <p matListItemLine>
+                <span>Sexo: {{student.Sexo}}</span>
+                <span class="demo-2"> Faltas: {{student.Faltas_Asistencia}}</span>
+                <mat-chip matBadge="8" matBadgePosition="after" matBadgeColor="accent">One fish</mat-chip>
+                <!-- <button class="" mat-raised-button color="primary" matBadge="8" matBadgePosition="after" matBadgeColor="accent">
+                    Aprobado
+                </button>         -->
+            </p>
+            
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    } @empty {
+    <h3>Lista vacia</h3>
+    }
+</mat-list>

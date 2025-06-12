@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Papa } from 'ngx-papaparse';
-import { Observable } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
+import { StudentDTO } from './student.dto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlumnosService {
 
-  private csvUrl = 'assets/tareas.csv';
+  private csvUrl = 'assets/notas_alumnos-1.csv';
   constructor(private papa: Papa, private http: HttpClient) { }
- /*
-  getData(): Observable<TaskDTO[]> {
+
+  getData(): Observable<StudentDTO[]> {
    
     return this.http.get(this.csvUrl, { responseType: 'text' }).pipe(
       map((data) => {
@@ -23,20 +24,13 @@ export class AlumnosService {
           },
         });
 
-        const tasks: TaskDTO[] = parsedData.data.map((item: any) => ({
-          id: item.id,
-          title: item.title,
-          description: item.description,
-          complete: item.complete === 'True' ? true : false,
-          creation_date: item.creation_date,
-        }));
-
-        return tasks;
+        const students: StudentDTO[] = parsedData.data.map((item: StudentDTO) => item );
+        return students;
       }),
-      catchError((error) => {
+      catchError(error => {
         console.error('Error loading CSV file:', error);
         return of([]);
       })
     );
-  }*/
+  }
 }
