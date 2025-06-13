@@ -5,14 +5,11 @@ import { StudentDTO } from '../../shared/student.dto';
 // Angular Material
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatBadgeModule } from '@angular/material/badge';
-// import { MatButtonModule } from '@angular/material/button';
-import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ MatListModule, MatDividerModule, MatBadgeModule, MatChipsModule ],
+  imports: [ MatListModule, MatDividerModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

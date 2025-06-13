@@ -1,0 +1,46 @@
+.title-page{
+    font-size: xx-large;
+    margin: 2rem;
+}
+
+.container {
+    // width: 100%;
+    margin: 3rem;
+    @media (max-width: 768px) {
+        margin: 1rem;
+    }
+}
+
+.btn-centrado{
+    margin-top: 15px !important;
+    color: #2a2c30 !important;
+    font-size: 12px !important;
+}
+
+.badge-suspendido {
+    font-size: 14px !important;
+    color: white;
+    background-color: #ff2f2f;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.badge-aprobado{
+    font-size: 14px !important;
+    color: white;
+    background-color: #3e923e;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.example-viewport {
+  height: 600px;
+  width: 100%;
+//   border: 1px solid black;
+}
+
+.example-item {
+  height: 50px;
+}

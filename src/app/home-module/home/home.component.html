@@ -5,15 +5,16 @@
         <mat-list-item>
             <img matListItemAvatar src="https://i.pravatar.cc/{{ idx }}" alt="..." loading="lazy">
             <h3 matListItemTitle>{{student.Apellidos}}, {{student.Nombre}}</h3>
+            <!-- <button mat-raised-button matListItemMeta matBadge="8" matBadgePosition="after" matBadgeColor="accent" class="btn-centrado">Aprobado</button> -->
+            <span class="btn-centrado" matListItemMeta>
+                @if (student.Nota_Final >= 5) { Aprobado }
+                @else { Suspenso }
+                <span [class]="student.Nota_Final > 5 ? 'badge-aprobado' : 'badge-suspendido'">{{ student.Nota_Final }}</span>
+            </span>
             <p matListItemLine>
-                <span>Sexo: {{student.Sexo}}</span>
-                <span class="demo-2"> Faltas: {{student.Faltas_Asistencia}}</span>
-                <mat-chip matBadge="8" matBadgePosition="after" matBadgeColor="accent">One fish</mat-chip>
-                <!-- <button class="" mat-raised-button color="primary" matBadge="8" matBadgePosition="after" matBadgeColor="accent">
-                    Aprobado
-                </button>         -->
-            </p>
-            
+                <span matLine class="demo-2">Sexo: {{student.Sexo}}</span>
+                <span matLine class="demo-2"> Faltas: {{student.Faltas_Asistencia}}</span>                
+            </p>                        
         </mat-list-item>
         <mat-divider></mat-divider>
     } @empty {

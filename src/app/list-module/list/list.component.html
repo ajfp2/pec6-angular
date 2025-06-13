@@ -1,1 +1,26 @@
-<p>list works!</p>
+<h1 class="title-page">Menú List- Listado Alumnos Virtual Scroll</h1>
+<mat-divider></mat-divider>
+<mat-list class="container">
+
+    <cdk-virtual-scroll-viewport class="example-viewport" [itemSize]="50">
+        <div *cdkVirtualFor="let student of students; let idx = $index">
+            <mat-list-item>
+                <img matListItemAvatar src="https://i.pravatar.cc/{{ idx }}" alt="..." loading="lazy">
+                <h3 matListItemTitle>{{student.Apellidos}}, {{student.Nombre}}</h3>            
+                <span class="btn-centrado" matListItemMeta>
+                    @if (student.Nota_Final >= 5) { Aprobado }
+                    @else { Suspenso }
+                    <span [class]="student.Nota_Final > 5 ? 'badge-aprobado' : 'badge-suspendido'">{{ student.Nota_Final }}</span>
+                </span>
+                <p matListItemLine>
+                    <span matLine class="demo-2">Sexo: {{student.Sexo}}</span>
+                    <span matLine class="demo-2"> Faltas: {{student.Faltas_Asistencia}}</span>                
+                </p>                        
+            </mat-list-item>
+
+            <mat-divider></mat-divider>
+        </div>
+
+    </cdk-virtual-scroll-viewport>
+
+</mat-list>
