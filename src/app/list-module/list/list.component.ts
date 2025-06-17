@@ -25,8 +25,7 @@ export class ListComponent {
   
     ngOnInit(): void {
       this.as.getData().subscribe( (data: StudentDTO[]) => {
-        this.students = data;
-        console.log(data);      
+        this.students = data;  
       });
     }
 

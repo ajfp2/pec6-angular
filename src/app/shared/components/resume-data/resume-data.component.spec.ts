@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatisticsComponent } from './statistics.component';
+import { ResumeDataComponent } from './resume-data.component';
 
-describe('StatisticsComponent', () => {
-  let component: StatisticsComponent;
-  let fixture: ComponentFixture<StatisticsComponent>;
+describe('ResumeDataComponent', () => {
+  let component: ResumeDataComponent;
+  let fixture: ComponentFixture<ResumeDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [StatisticsComponent]
+      imports: [ResumeDataComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(StatisticsComponent);
+    fixture = TestBed.createComponent(ResumeDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
