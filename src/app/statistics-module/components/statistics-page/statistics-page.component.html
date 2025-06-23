@@ -1,0 +1,32 @@
+<h1 class="title-page">Menú Statistics- Estadisticas de Alumnos</h1>
+<mat-divider></mat-divider>
+
+<div class="container">
+
+    <h2>Bloque 1- Resumen de los datos</h2>
+    @defer (on viewport) {
+        <div class="bloque">
+            <app-resume-data title="Total Alumnos, Aprobados y Suspensos"></app-resume-data>
+        </div>
+    } @placeholder {
+        <p class="block mt-5">Cargando gráfica ...</p>
+    }
+
+    <h2>Bloque 2- Género</h2>
+    @defer (on viewport) {
+        <div class="bloque">
+            <app-gender title="Género"></app-gender>
+        </div>
+    } @placeholder {
+        <p class="block mt-5">Cargando gráfica ...</p>
+    }
+
+    <h2>Bloque 3-  Aprobados vs Suspendidos</h2>
+    @defer (on viewport) {
+        <div class="bloque">
+            <app-general-results title="Comparativa Aprobados/Suspensos"></app-general-results>
+        </div>
+    } @placeholder {
+        <p class="block mt-5">Cargando gráfica ...</p>
+    }
+</div>

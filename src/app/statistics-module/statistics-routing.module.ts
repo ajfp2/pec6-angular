@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StatisticsPageComponent } from './statistics-page/statistics-page.component';
+import { StatisticsPageComponent } from './components/statistics-page/statistics-page.component';
+
 
 const routes: Routes = [
   {

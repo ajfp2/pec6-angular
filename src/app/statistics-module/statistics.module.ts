@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
-
-
 import { StatisticsRoutingModule } from './statistics-routing.module';
-import { ResumeDataComponent } from '../shared/components/resume-data/resume-data.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [ ],
   imports: [
     CommonModule,
-    StatisticsRoutingModule,
-    ResumeDataComponent
+    SharedModule,
+    StatisticsRoutingModule
   ]
 })
 export class StatisticsModule { }

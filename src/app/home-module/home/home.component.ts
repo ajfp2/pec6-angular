@@ -24,12 +24,7 @@ export class HomeComponent {
   ngOnInit(): void {
     this.as.getData().subscribe( (data: StudentDTO[]) => {
       this.students = data;
-      console.log(data);      
     });
   }
-
-  // trackById(index: number, student: StudentDTO): number {
-  //   return student.ID_Alumno; // Devuelve el id de la tarea como identificador único
-  // }
 
 }
